@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/sqlfluff/sqlfluff-go
+    rev: v0.4.0
+    hooks:
+      - id: ruffsql-lint
+        name: RuffSQL Lint
+        entry: ruffsql lint
+        language: golang
+        types: [sql]
+      - id: ruffsql-fix
+        name: RuffSQL Fix
+        entry: ruffsql fix --write
+        language: golang
+        types: [sql]
